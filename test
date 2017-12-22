@@ -97,7 +97,7 @@ for i, batch in enumerate(dataloader):
     
     high_res_fake = generator(low_res)
     
-    psnr = calcPSNR(high_res_fake.data, high_res_real.data)
+    psnr = calcPSNR(unnormalize(high_res_fake.data), unnormalize(high_res_real.data))
     avg_psnr += psnr
     
     ######### Test discriminator #########
