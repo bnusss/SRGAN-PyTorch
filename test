@@ -131,4 +131,4 @@ for i, batch in enumerate(dataloader):
 sys.stdout.write('\r[%d/%d] Discriminator_Loss: %.4f Generator_Loss (Content/Advers/Total): %.4f/%.4f/%.4f\n' % (i+1, len(dataloader),
 mean_discriminator_loss/len(dataloader), mean_generator_content_loss/len(dataloader), 
 mean_generator_adversarial_loss/len(dataloader), mean_generator_total_loss/len(dataloader)))
-print('Avg. PSNR: {:.4f} dB'.format(avg_psnr / opt.batchSize))
+print('Avg. PSNR: {:.4f} dB'.format(avg_psnr / 10))
